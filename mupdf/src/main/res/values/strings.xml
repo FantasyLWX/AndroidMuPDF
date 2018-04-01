@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="okay">确定</string>
+    <string name="cancel">取消</string>
+    <string name="dismiss">关闭</string>
+    <string name="search">搜索&#x2026;</string>
+    <string name="searching_">搜索中&#x2026;</string>
+    <string name="text_not_found">未找到相关内容。</string>
+    <string name="no_further_occurrences_found">搜索无效。</string>
+    <string name="cannot_open_document">无法打开文件。</string>
+    <string name="cannot_open_document_Reason">无法打开文件，原因：%1$s</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="not_supported">不支持</string>
+
+</resources>
