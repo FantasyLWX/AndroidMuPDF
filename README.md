@@ -3,7 +3,7 @@ AndroidMuPDF 提供一种集成第三方开源库 [MuPDF](https://mupdf.com) 的
 
 所集成的 MuPDF 的版本是 1.12.0
 
-Demo安装包：<https://github.com/FantasyLWX/AndroidMuPDF/tree/master/other/AndroidMuPDF_V1.0_1_180401_1.apk>
+Demo安装包：<https://github.com/FantasyLWX/AndroidMuPDF/raw/master/other/AndroidMuPDF_V1.0_1_180401_1.apk>
 
 ## 效果图
 
@@ -11,13 +11,19 @@ Demo安装包：<https://github.com/FantasyLWX/AndroidMuPDF/tree/master/other/An
 
 ## 用法
 
-**Android Studio** 直接导入 mupdf 模块就可以了。
+* Android Studio
 
-**Eclipse** 则要将 mupdf 模块中“java”文件夹中的源码、“jniLibs”文件夹中的so文件、“res”文件夹中的资源文件和AndroidManifest.xml复制到自己的项目工程中。
+直接导入 mupdf 模块就可以了
+
+* Eclipse
+
+将 mupdf 模块中“java”文件夹中的源码、“jniLibs”文件夹中的so文件、“res”文件夹中的资源文件和AndroidManifest.xml复制到自己的项目工程中。
 
 **温馨提示：** 一般情况下，“jniLibs”文件夹中的so文件，只要用“armeabi”和“armeabi-v7a”就足够用了。
 
-调用 MuPDF 预览文件的方式，例如：
+## 示例
+
+调用 MuPDF 预览文件的方式：
 
 ```Java
 Intent intent = new Intent(MainActivity.this, DocumentActivity.class);
@@ -27,5 +33,3 @@ intent.setAction(Intent.ACTION_VIEW);
 intent.setData(Uri.fromFile(new File(path)));
 startActivity(intent);
 ```
-
-
