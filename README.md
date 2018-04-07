@@ -19,17 +19,21 @@ Demo安装包：<https://github.com/FantasyLWX/AndroidMuPDF/raw/master/other/And
 
 将 mupdf 模块中“java”文件夹中的源码、“jniLibs”文件夹中的so文件、“res”文件夹中的资源文件和AndroidManifest.xml复制到自己的项目工程中。
 
-**温馨提示：** 一般情况下，“jniLibs”文件夹中的so文件，只要用“armeabi”和“armeabi-v7a”就足够用了。
+**温馨提示：** 一般情况下，“jniLibs”文件夹中的so文件，只要用“armeabi”和“armeabi-v7a”这两个就可以了。
 
 ## 示例
 
 调用 MuPDF 预览文件的方式：
 
 ```Java
-Intent intent = new Intent(MainActivity.this, DocumentActivity.class);
-// intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT); // API>=21，launch as a new document
-intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-intent.setAction(Intent.ACTION_VIEW);
-intent.setData(Uri.fromFile(new File(path)));
-startActivity(intent);
+import com.artifex.mupdf.viewer.DocumentActivity;
+
+public void startMuPDFActivity(String path) {
+    Intent intent = new Intent(MainActivity.this, DocumentActivity.class);
+    // intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT); // API>=21，launch as a new document
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+    intent.setAction(Intent.ACTION_VIEW);
+    intent.setData(Uri.fromFile(new File(path)));
+    startActivity(intent);
+}
 ```
