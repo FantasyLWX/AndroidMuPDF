@@ -37,3 +37,10 @@ public void startMuPDFActivity(String path) {
     startActivity(intent);
 }
 ```
+
+## 混淆
+
+```
+-dontwarn com.artifex.mupdf.**
+-keep class com.artifex.mupdf.** {*;}
+```
